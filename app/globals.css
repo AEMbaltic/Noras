@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --sand-50: #fbf6ee;
+  --sand-100: #f5ead5;
+  --sand-200: #ecd9b6;
+  --sand-300: #dfc194;
+  --sand-400: #cea86e;
+  --choc-500: #8a5a3c;
+  --choc-600: #6b4530;
+  --choc-700: #4f3423;
+  --choc-800: #3a2519;
+  --choc-900: #261810;
+  --pine-500: #4a5d47;
+  --pine-600: #3a4a38;
+  --pine-700: #2c3a2a;
+  --pine-800: #1f2a1e;
+  --sea-300: #a9c7cc;
+  --sea-400: #7fa8b3;
+  --sea-500: #5c8b98;
+  --sea-600: #436f7c;
+  --cream: #faf3e6;
+}
+
+@theme inline {
+  --color-sand-50: var(--sand-50);
+  --color-sand-100: var(--sand-100);
+  --color-sand-200: var(--sand-200);
+  --color-sand-300: var(--sand-300);
+  --color-sand-400: var(--sand-400);
+  --color-choc-500: var(--choc-500);
+  --color-choc-600: var(--choc-600);
+  --color-choc-700: var(--choc-700);
+  --color-choc-800: var(--choc-800);
+  --color-choc-900: var(--choc-900);
+  --color-pine-500: var(--pine-500);
+  --color-pine-600: var(--pine-600);
+  --color-pine-700: var(--pine-700);
+  --color-pine-800: var(--pine-800);
+  --color-sea-300: var(--sea-300);
+  --color-sea-400: var(--sea-400);
+  --color-sea-500: var(--sea-500);
+  --color-sea-600: var(--sea-600);
+  --color-cream: var(--cream);
+  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--sand-50);
+  color: var(--choc-800);
+  font-family: var(--font-sans);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* subtle grain overlay for warmth, applied via ::before on sections that opt in */
+.grain {
+  position: relative;
+  isolation: isolate;
+}
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  z-index: 1;
+}
+
+.balance {
+  text-wrap: balance;
+}
+
+.container-px {
+  padding-left: clamp(1.25rem, 5vw, 5rem);
+  padding-right: clamp(1.25rem, 5vw, 5rem);
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-2%); }
+}
+.animate-drift {
+  animation: drift 14s ease-in-out infinite;
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: float-y 6s ease-in-out infinite;
+}
