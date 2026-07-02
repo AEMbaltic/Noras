@@ -42,7 +42,7 @@ export default function Home() {
       {/* NAV */}
       <header className="fixed inset-x-0 top-0 z-50 border-b border-choc-800/5 bg-sand-50/80 backdrop-blur-md">
         <div className="container-px mx-auto flex h-[72px] max-w-7xl items-center justify-between">
-          <a href="#top" className="font-serif text-2xl tracking-wide text-choc-800">
+          <a href="#top" className="font-serif text-2xl font-medium tracking-wide text-choc-800">
             NORAS
           </a>
           <nav className="hidden items-center gap-9 md:flex">
@@ -77,10 +77,10 @@ export default function Home() {
           <p className="mb-5 flex items-center gap-2 text-[13px] font-medium uppercase tracking-[0.25em] text-choc-700/80">
             <IconPin className="h-4 w-4" /> Mērsrags, Latvija
           </p>
-          <h1 className="balance max-w-4xl font-serif text-[15vw] leading-[0.95] text-choc-800 sm:text-[9vw] md:text-[7.2rem]">
+          <h1 className="balance max-w-4xl font-serif text-[clamp(3rem,9vw,7.2rem)] font-medium leading-[0.95] text-choc-800">
             Kāpas.
             <br />
-            <span className="italic text-choc-700">Priedes.</span>
+            <span className="italic font-normal text-choc-700">Priedes.</span>
             <br />
             Jūra pie sliekšņa.
           </h1>
@@ -117,7 +117,7 @@ export default function Home() {
             ["4.5/5", "no 200+ atsauksmēm"],
           ].map(([n, l]) => (
             <div key={l}>
-              <div className="font-serif text-4xl text-sand-50 md:text-5xl">{n}</div>
+              <div className="font-serif text-4xl font-medium text-sand-50 md:text-5xl">{n}</div>
               <div className="mt-1 text-[13px] uppercase tracking-[0.08em] text-sand-100/70">{l}</div>
             </div>
           ))}
@@ -135,7 +135,7 @@ export default function Home() {
           </div>
           <div>
             <p className="text-[13px] font-medium uppercase tracking-[0.2em] text-sea-600">Par kempingu</p>
-            <h2 className="balance mt-4 font-serif text-4xl leading-tight text-choc-800 md:text-5xl">
+            <h2 className="balance mt-4 font-serif text-4xl font-medium leading-tight text-choc-800 md:text-5xl">
               Ģimenes vieta, kur jūra ir kaimiņos
             </h2>
             <p className="mt-6 text-[17px] leading-relaxed text-choc-700/90">
@@ -157,7 +157,7 @@ export default function Home() {
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
               <p className="text-[13px] font-medium uppercase tracking-[0.2em] text-sea-600">Deviņas mājas</p>
-              <h2 className="balance mt-4 max-w-xl font-serif text-4xl leading-tight text-choc-800 md:text-5xl">
+              <h2 className="balance mt-4 max-w-xl font-serif text-4xl font-medium leading-tight text-choc-800 md:text-5xl">
                 Katrai mājai — savs vārds, savs stāsts
               </h2>
             </div>
@@ -176,7 +176,7 @@ export default function Home() {
                   className="group overflow-hidden rounded-2xl border border-choc-800/8 bg-sand-50 transition-shadow hover:shadow-[0_18px_40px_-15px_rgba(58,37,25,0.25)]"
                 >
                   <div className={`relative flex aspect-[4/3] items-center justify-center ${tone.bg}`}>
-                    <span className={`font-serif text-7xl ${tone.text} opacity-90`}>
+                    <span className={`font-serif text-7xl font-medium ${tone.text} opacity-90`}>
                       {String(h.number).padStart(2, "0")}
                     </span>
                     <span className="absolute right-4 top-4 rounded-full bg-black/10 px-3 py-1 text-[11px] uppercase tracking-[0.1em] text-white/90">
@@ -185,7 +185,7 @@ export default function Home() {
                   </div>
                   <div className="p-6">
                     <div className="flex items-baseline justify-between gap-3">
-                      <h3 className="font-serif text-2xl text-choc-800">
+                      <h3 className="font-serif text-2xl font-medium text-choc-800">
                         {h.name} <span className="text-base text-choc-700/50">Nr. {h.number}</span>
                       </h3>
                     </div>
@@ -203,7 +203,7 @@ export default function Home() {
                     </div>
                     <div className="mt-5 flex items-center justify-between border-t border-choc-800/8 pt-4">
                       <span className="text-[15px] text-choc-800">
-                        no <span className="font-serif text-xl">€{h.from}</span> / naktī
+                        no <span className="font-serif text-xl font-medium">€{h.from}</span> / naktī
                       </span>
                       <a
                         href="#kontakti"
@@ -225,7 +225,7 @@ export default function Home() {
         <PineRow className="pointer-events-none absolute -top-2 left-0 h-20 w-full text-pine-700/40" />
         <div className="container-px relative mx-auto max-w-7xl">
           <p className="text-[13px] font-medium uppercase tracking-[0.2em] text-sea-300">Ērtības</p>
-          <h2 className="balance mt-4 max-w-xl font-serif text-4xl leading-tight text-sand-50 md:text-5xl">
+          <h2 className="balance mt-4 max-w-xl font-serif text-4xl font-medium leading-tight text-sand-50 md:text-5xl">
             Viss, kas vasarai nepieciešams
           </h2>
           <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
@@ -277,7 +277,7 @@ export default function Home() {
         <div className="container-px mx-auto grid max-w-7xl items-center gap-14 md:grid-cols-2 md:gap-20">
           <div>
             <p className="text-[13px] font-medium uppercase tracking-[0.2em] text-sea-600">Atrašanās vieta</p>
-            <h2 className="balance mt-4 font-serif text-4xl leading-tight text-choc-800 md:text-5xl">
+            <h2 className="balance mt-4 font-serif text-4xl font-medium leading-tight text-choc-800 md:text-5xl">
               Bākas iela 58, Mērsrags
             </h2>
             <p className="mt-6 text-[17px] leading-relaxed text-choc-700/90">
@@ -325,7 +325,7 @@ export default function Home() {
         <WaveDivider className="pointer-events-none absolute -top-1 left-0 h-14 w-full rotate-180 text-choc-800" color="var(--sand-50)" />
         <div className="container-px relative mx-auto max-w-4xl text-center">
           <p className="text-[13px] font-medium uppercase tracking-[0.2em] text-sea-300">Rezervācija</p>
-          <h2 className="balance mt-4 font-serif text-4xl leading-tight md:text-6xl">Rezervē savu vasaru pie jūras</h2>
+          <h2 className="balance mt-4 font-serif text-4xl font-medium leading-tight md:text-6xl">Rezervē savu vasaru pie jūras</h2>
           <p className="mx-auto mt-6 max-w-lg text-[17px] text-sand-100/80">
             Sazinies ar mums, un atradīsim māju, kas piestāv tieši jūsu ģimenei.
           </p>
@@ -358,7 +358,7 @@ export default function Home() {
       <footer className="bg-sand-50 py-12">
         <div className="container-px mx-auto flex max-w-7xl flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
           <div>
-            <span className="font-serif text-2xl text-choc-800">NORAS</span>
+            <span className="font-serif text-2xl font-medium text-choc-800">NORAS</span>
             <p className="mt-1 text-[13px] text-choc-700/60">Bākas iela 58, Mērsrags, Talsu novads</p>
           </div>
           <nav className="flex flex-wrap justify-center gap-6">
