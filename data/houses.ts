@@ -10,15 +10,15 @@ export type House = {
 };
 
 export const houses: House[] = [
-  { number: 1, name: "Kāpa", meaning: "the dune", guests: 4, from: 90, tone: "sand" },
-  { number: 2, name: "Priede", meaning: "the pine", guests: 4, from: 90, tone: "pine" },
-  { number: 3, name: "Vilnis", meaning: "the wave", guests: 4, from: 95, tone: "sea" },
-  { number: 4, name: "Dzintars", meaning: "the amber", guests: 4, from: 95, tone: "choc" },
-  { number: 5, name: "Smilga", meaning: "the beach grass", guests: 4, from: 90, tone: "sand" },
-  { number: 6, name: "Bāka", meaning: "the lighthouse", guests: 4, from: 105, tone: "sea" },
-  { number: 7, name: "Krasts", meaning: "the shore", guests: 4, from: 90, tone: "pine" },
-  { number: 8, name: "Egle", meaning: "the spruce", guests: 4, from: 90, tone: "choc" },
-  { number: 9, name: "Saulriets", meaning: "the sunset", guests: 4, from: 110, tone: "sea" },
+  { number: 1, name: "Kāpa", meaning: "the dune", guests: 4, from: 80, tone: "sand" },
+  { number: 2, name: "Priede", meaning: "the pine", guests: 4, from: 80, tone: "pine" },
+  { number: 3, name: "Vilnis", meaning: "the wave", guests: 4, from: 80, tone: "sea" },
+  { number: 4, name: "Dzintars", meaning: "the amber", guests: 4, from: 80, tone: "choc" },
+  { number: 5, name: "Smilga", meaning: "the beach grass", guests: 4, from: 80, tone: "sand" },
+  { number: 6, name: "Bāka", meaning: "the lighthouse", guests: 4, from: 80, tone: "sea" },
+  { number: 7, name: "Krasts", meaning: "the shore", guests: 4, from: 80, tone: "pine" },
+  { number: 8, name: "Egle", meaning: "the spruce", guests: 4, from: 80, tone: "choc" },
+  { number: 9, name: "Saulriets", meaning: "the sunset", guests: 4, from: 80, tone: "sea" },
 ];
 
 export const toneClasses: Record<House["tone"], { bg: string; text: string; ring: string }> = {

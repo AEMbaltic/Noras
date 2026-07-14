@@ -6,7 +6,7 @@ import {
   IconKitchen,
   IconFire,
   IconWifi,
-  IconTree,
+  IconPaw,
   IconWave,
   IconUsers,
   IconPin,
@@ -37,8 +37,8 @@ const amenities = [
   { icon: IconKitchen, label: "Aprīkota virtuve" },
   { icon: IconFire, label: "Ugunskura un grila vieta" },
   { icon: IconUsers, label: "Rotaļu laukums bērniem" },
-  { icon: IconTree, label: "Priežu meža taka" },
-  { icon: IconWave, label: "300 m līdz pludmalei" },
+  { icon: IconPaw, label: "Mājdzīvnieki atļauti" },
+  { icon: IconWave, label: "200 m līdz pludmalei" },
   { icon: IconBed, label: "Gultas veļa un dvieļi" },
 ];
 
@@ -64,7 +64,7 @@ const reviews = [
   {
     name: "Viesis",
     country: "Booking.com",
-    text: "Lieliska atrašanās vieta pie Mērsraga bākas. Miers, jūras šalkas un laipni saimnieki.",
+    text: "Līdz bākai un pludmalei var aiziet basām kājām. Miers, jūras šalkas un laipni saimnieki.",
   },
 ];
 
@@ -170,7 +170,7 @@ export default function Home() {
               {[
                 { icon: IconHome, label: "9 mājiņas" },
                 { icon: IconUsers, label: "Līdz 4 viesiem katrā" },
-                { icon: IconWave, label: "300 m līdz jūrai" },
+                { icon: IconWave, label: "200 m līdz jūrai" },
               ].map((h) => (
                 <span key={h.label} className="inline-flex items-center gap-2 rounded-full border border-choc-800/12 bg-cream px-4 py-2 text-[14px] text-choc-800">
                   <h.icon className="h-4 w-4 text-pine-600" /> {h.label}
@@ -322,14 +322,14 @@ export default function Home() {
               Atsauksmes
             </h2>
             <div className="mt-6 flex items-center justify-center gap-3">
-              <span className="font-serif text-5xl font-medium text-sand-50">4.5</span>
+              <span className="font-serif text-5xl font-medium text-sand-50">9.5</span>
               <div className="text-left">
                 <div className="flex gap-0.5 text-terra-500">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <IconStar key={i} className="h-4 w-4" />
                   ))}
                 </div>
-                <span className="text-[13px] text-sand-100/70">/ 5 — vairāk nekā 200 atsauksmes</span>
+                <span className="text-[13px] text-sand-100/70">/ 10 — 203 atsauksmes Booking.com</span>
               </div>
             </div>
           </div>
@@ -371,7 +371,7 @@ export default function Home() {
             {
               icon: IconCar,
               title: "Attālums",
-              lines: ["93 km no Rīgas lidostas", "300 m līdz pludmalei", "Bezmaksas stāvvieta"],
+              lines: ["93 km no Rīgas lidostas", "200 m līdz pludmalei", "Bezmaksas stāvvieta"],
             },
           ].map((c) => (
             <div key={c.title} className="rounded-2xl border border-choc-800/10 bg-cream p-7 text-center">

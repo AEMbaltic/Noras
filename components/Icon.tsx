@@ -133,6 +133,17 @@ export function IconStar({ className = "" }: IconProps) {
   );
 }
 
+export function IconPaw({ className = "" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke={base} strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="7" cy="8" r="1.8" />
+      <circle cx="12" cy="6" r="1.8" />
+      <circle cx="17" cy="8" r="1.8" />
+      <path d="M12 11c-2.8 0-5 2.2-5.6 4.6-.3 1.3.7 2.4 2 2.4h7.2c1.3 0 2.3-1.1 2-2.4C17 13.2 14.8 11 12 11Z" />
+    </svg>
+  );
+}
+
 export function IconClock({ className = "" }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" className={className} fill="none" stroke={base} strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">
