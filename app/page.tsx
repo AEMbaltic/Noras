@@ -1,5 +1,7 @@
 import Image from "next/image";
 import BookingForm from "@/components/BookingForm";
+import AvailabilityCalendar from "@/components/AvailabilityCalendar";
+import availability from "@/data/availability.json";
 import {
   IconBed,
   IconDeck,
@@ -302,13 +304,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* BOOKING */}
+      {/* BOOKING / AVAILABILITY */}
       <section id="booking" className="container-px mx-auto max-w-7xl py-24 md:py-32">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-[13px] font-medium uppercase tracking-[0.2em] text-terra-500">Rezervējiet uzturēšanos</p>
+          <p className="text-[13px] font-medium uppercase tracking-[0.2em] text-terra-500">Rezervācija</p>
           <h2 className="balance mt-4 font-serif text-4xl font-medium leading-tight text-choc-800 md:text-5xl">
-            Izvēlieties datumus
+            Pieejamie datumi
           </h2>
+          <p className="mt-5 text-[16px] text-choc-700/80">
+            Kalendārā redzams, kuri datumi jau ir aizņemti. Lai rezervētu, dodies uz Booking.com vai sazinies ar
+            mums tieši.
+          </p>
+        </div>
+        <div className="mx-auto mt-12 max-w-3xl">
+          <AvailabilityCalendar initialBooked={availability.booked} />
+          <div className="mt-8 flex justify-center">
+            <a
+              href="https://www.booking.com/hotel/lv/camping-noras.lv.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-pine-600 px-8 py-4 text-[13px] font-medium uppercase tracking-[0.1em] text-sand-50 transition-colors hover:bg-pine-700"
+            >
+              Rezervēt Booking.com <IconArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl text-center">
+          <h3 className="font-serif text-2xl font-medium text-choc-800">Vai nosūti pieprasījumu tieši</h3>
         </div>
         <BookingForm />
       </section>
