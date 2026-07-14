@@ -133,6 +133,36 @@ export function IconStar({ className = "" }: IconProps) {
   );
 }
 
+export function IconClock({ className = "" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke={base} strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3.5 2" />
+    </svg>
+  );
+}
+
+export function IconCar({ className = "" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke={base} strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4 16v-4l2-6h12l2 6v4" />
+      <path d="M4 12h16" />
+      <circle cx="7.5" cy="16.5" r="1.7" />
+      <circle cx="16.5" cy="16.5" r="1.7" />
+    </svg>
+  );
+}
+
+export function IconHome({ className = "" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke={base} strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4 11 12 4l8 7" />
+      <path d="M6 9.5V20h12V9.5" />
+      <path d="M10 20v-6h4v6" />
+    </svg>
+  );
+}
+
 export function IconArrowRight({ className = "" }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" className={className} fill="none" stroke={base} strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">

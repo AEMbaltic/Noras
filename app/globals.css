@@ -19,6 +19,8 @@
   --sea-400: #7fa8b3;
   --sea-500: #5c8b98;
   --sea-600: #436f7c;
+  --terra-500: #cc7a33;
+  --terra-600: #b3661f;
   --cream: #faf3e6;
 }
 
@@ -41,6 +43,8 @@
   --color-sea-400: var(--sea-400);
   --color-sea-500: var(--sea-500);
   --color-sea-600: var(--sea-600);
+  --color-terra-500: var(--terra-500);
+  --color-terra-600: var(--terra-600);
   --color-cream: var(--cream);
   --font-serif: var(--font-cormorant);
   --font-sans: var(--font-dm-sans);
