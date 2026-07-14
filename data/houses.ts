@@ -5,6 +5,8 @@ export type House = {
   guests: number;
   from: number;
   tone: "sand" | "pine" | "sea" | "choc";
+  /** Path under /public, e.g. "/houses/01.jpg" — falls back to the colored tile when absent */
+  image?: string;
 };
 
 export const houses: House[] = [

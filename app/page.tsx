@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { DuneLayers, PineRow, WaveDivider, GrassTuft } from "@/components/Motifs";
 import {
   IconBed,
@@ -175,13 +176,25 @@ export default function Home() {
                   key={h.number}
                   className="group overflow-hidden rounded-2xl border border-choc-800/8 bg-sand-50 transition-shadow hover:shadow-[0_18px_40px_-15px_rgba(58,37,25,0.25)]"
                 >
-                  <div className={`relative flex aspect-[4/3] items-center justify-center ${tone.bg}`}>
-                    <span className={`font-serif text-7xl font-medium ${tone.text} opacity-90`}>
-                      {String(h.number).padStart(2, "0")}
-                    </span>
-                    <span className="absolute right-4 top-4 rounded-full bg-black/10 px-3 py-1 text-[11px] uppercase tracking-[0.1em] text-white/90">
-                      Foto drīzumā
-                    </span>
+                  <div className={`relative flex aspect-[4/3] items-center justify-center overflow-hidden ${tone.bg}`}>
+                    {h.image ? (
+                      <Image
+                        src={h.image}
+                        alt={`Māja Nr. ${h.number} — ${h.name}`}
+                        fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                      />
+                    ) : (
+                      <>
+                        <span className={`font-serif text-7xl font-medium ${tone.text} opacity-90`}>
+                          {String(h.number).padStart(2, "0")}
+                        </span>
+                        <span className="absolute right-4 top-4 rounded-full bg-black/10 px-3 py-1 text-[11px] uppercase tracking-[0.1em] text-white/90">
+                          Foto drīzumā
+                        </span>
+                      </>
+                    )}
                   </div>
                   <div className="p-6">
                     <div className="flex items-baseline justify-between gap-3">
